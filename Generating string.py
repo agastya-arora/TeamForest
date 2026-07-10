@@ -1,15 +1,17 @@
 import random
+import numpy as np
 initial=random.randint(1,10)
-multiply=random.randint(1,10)
-product=initial*multiply 
+"multiply=random.randint(1,10)"
+NumOfVertices=10
+NumOfRows=random.randint(2,NumOfVertices//2)
+NumOfCol=NumOfVertices-NumOfRows
+NumOfElements=NumOfCol*NumOfRows
+print(NumOfRows)
 string=""
-for i in range(product):
+for i in range(NumOfElements):
     a=random.randint(0,1)
     conv=str(a)
     string+=conv
-convInitial=str(initial)
-convMultiply=str(multiply)
-string+=convInitial
-storeMultiply=(len(string)-1)//initial
-print(storeMultiply)
+conv=str(NumOfRows)
+string+=conv
 print(string)
