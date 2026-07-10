@@ -3,7 +3,7 @@ import numpy as np
 initial=random.randint(1,10)
 "multiply=random.randint(1,10)"
 NumOfVertices=10
-NumOfRows=random.randint(2,NumOfVertices//2)
+NumOfRows=random.randint(1,NumOfVertices-1)
 NumOfCol=NumOfVertices-NumOfRows
 NumOfElements=NumOfCol*NumOfRows
 print(NumOfRows)
