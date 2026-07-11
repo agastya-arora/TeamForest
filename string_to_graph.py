@@ -1,7 +1,6 @@
 import generate_string as gs
 
-def create_matrix(vertices):
-    string = gs.generate_string(vertices)
+def create_matrix(vertices,string):
     print(string)
     LengthOfString = len(string) -1
     n=int(string[LengthOfString])#Number of rows
@@ -22,9 +21,9 @@ def create_matrix(vertices):
             G[j][i]=G[i][j]
     return G
 
-for x in create_matrix(int(input('Number of Vertices: '))):
+vertices = int(input('Number of Vertices: '))
+for x in create_matrix(vertices,gs.generate_string(vertices)):
     print(x)
-
 
 
 
