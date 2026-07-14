@@ -1,21 +1,21 @@
-#Currently only works for upper right corner of martix
-import random
+import generate_string as gs
 
-def create_random_graph():
-    my_string = [random.randint(1, 10)]
-    for x in range(my_string[0]*(random.randint(1,10))):
-        my_string.append(random.randint(0,1))
-    return my_string
+def create_matrix(vertices,string):
+    print(string)
+    LengthOfString = len(string) -1
+    n=int(string[LengthOfString])#Number of rows
+    m = int((len(string)-1)/n)#Number of columns
+    G = [[0 for _ in range(vertices)] for _ in range(vertices)] #Zero matrix
 
-my_string = create_random_graph() #Is a list not a string
-print(my_string)
-n=my_string[0]
-m = int((len(my_string)-1)/n)
-#Will give an n,m bipartite graph
-vertices = n+m
-print(vertices)
-G = [[0 for _ in range(vertices)] for _ in range(vertices)] #Adjacency matrix
+    CountStringItem = 0
+    for x in range(n):
+        CountColumn = n
+        for z in G[x][n:]:
+            G[x][CountColumn]=int(string[CountStringItem])
+            CountStringItem+=1
+            CountColumn+=1
 
+<<<<<<< HEAD
 count2 = 1
 for x in range(n):
     count1 = n
@@ -37,6 +37,18 @@ for x in range(t):
         G[count1][x]=my_string[count3]
         count3+=1
         count1+=1'''
+=======
+    for i in range(n):
+        for j in range(vertices):
+            #print(G[i][j])
+            G[j][i]=G[i][j]
+    return G
+
+vertices = int(input('Number of Vertices: '))
+for x in create_matrix(vertices,gs.generate_string(vertices)):
+    print(x)
+
+>>>>>>> aca03b1ea7a9267a9151c78083fed2816c5bbe1f
 
 
 
