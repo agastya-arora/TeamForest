@@ -23,8 +23,13 @@ for x in range(n):
         G[x][count1]=my_string[count2]
         count2+=1
         count1+=1
+
+for i in range(n):
+    for j in range(n+m):
+        G[j][i]=G[i][j]
 for x in G:
     print(x)
+
 '''count3 = 1
 for x in range(t):
     count1=m
