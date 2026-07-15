@@ -1,5 +1,4 @@
-def is_legal_string(str):
-    lst=str.split() #converts to list
+def is_legal_list(lst):
     print(lst)
     NumOfRows=lst.pop(0) #removes first element from the list
     for i in lst:
