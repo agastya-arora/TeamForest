@@ -1,26 +1,35 @@
 import generate_list as gs
+def create_matrix(vertices, string):
+    '''
+    Args: 
+      vertices: number of vertices that the graph has.
+      string: A list/string representation of the adjacency matrix.
 
-def create_matrix(vertices,string):
-    print(string)
-    LengthOfString = len(string) -1
-    n=int(string[LengthOfString])#Number of rows
-    m = int((len(string)-1)/n)#Number of columns
-    G = [[0 for _ in range(vertices)] for _ in range(vertices)] #Zero matrix
+    Outputs:
+      G: the adjacency matrix of graph G.
+    '''
+    # Extract n from the beginning of the string/list
+    n = int(string[0]) 
 
-    CountStringItem = 0
+    # Initialize zero matrix
+    G = [[0 for _ in range(vertices)] for _ in range(vertices)] 
+
+    # Start reading edge data from index 1 (since index 0 is n)
+    CountStringItem = 1 
+    
     for x in range(n):
         CountColumn = n
         for z in G[x][n:]:
-            G[x][CountColumn]=int(string[CountStringItem])
-            CountStringItem+=1
-            CountColumn+=1
+            G[x][CountColumn] = int(string[CountStringItem])
+            CountStringItem += 1
+            CountColumn += 1
 
+    # Mirror the top-right block to the bottom-left to maintain symmetry
     for i in range(n):
         for j in range(vertices):
-            #print(G[i][j])
-            G[j][i]=G[i][j]
+            G[j][i] = G[i][j]
+            
     return G
-
 '''vertices = int(input('Number of Vertices: '))
 for x in create_matrix(vertices,gs.generate_list(vertices)):
     print(x)'''
