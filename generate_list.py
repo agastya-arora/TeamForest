@@ -6,7 +6,7 @@ def generate_list(n):
     NumOfRows=random.randint(1,NumOfVertices-1) # number of rows of the block
     NumOfCol=NumOfVertices-NumOfRows # number of columns in the block
     NumOfElements=NumOfCol*NumOfRows #in the block
-    print(NumOfRows)
+    #print(NumOfRows)
     lst=[]
 
     for i in range(NumOfElements):
