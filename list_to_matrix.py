@@ -1,5 +1,5 @@
 import generate_list as gs
-def list_to_matrix(vertices, string):
+def list_to_matrix(vertices, list):
     '''
     Args: 
       vertices: number of vertices that the graph has.
@@ -9,7 +9,7 @@ def list_to_matrix(vertices, string):
       G: the adjacency matrix of graph G.
     '''
     # Extract n from the beginning of the string/list
-    n = int(string[0]) 
+    n = int(list[vertices-1]) 
 
     # Initialize zero matrix
     G = [[0 for _ in range(vertices)] for _ in range(vertices)] 
