@@ -1,5 +1,5 @@
 import generate_list as gs
-def create_matrix(vertices, string):
+def list_to_matrix(vertices, string):
     '''
     Args: 
       vertices: number of vertices that the graph has.
