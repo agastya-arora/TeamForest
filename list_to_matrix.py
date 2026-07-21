@@ -15,13 +15,13 @@ def list_to_matrix(vertices, list):
     G = [[0 for _ in range(vertices)] for _ in range(vertices)] 
 
     # Start reading edge data from index 1 (since index 0 is n)
-    CountStringItem = 1 
+    CountListItem = 0 
     
     for x in range(n):
         CountColumn = n
         for z in G[x][n:]:
-            G[x][CountColumn] = int(string[CountStringItem])
-            CountStringItem += 1
+            G[x][CountColumn] = int(list[CountListItem])
+            CountListItem += 1
             CountColumn += 1
 
     # Mirror the top-right block to the bottom-left to maintain symmetry
