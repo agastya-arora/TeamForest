@@ -2,7 +2,7 @@ import find_cycles as fc
 import get_all_minors
 
 def create_sequence(vertices,matrix):
-    for y in range(2,vertices):
+    for y in range(1,vertices):
         all_minors = get_all_minors.get_minor(matrix,vertices,y)
         NumCollections = 0 #Counts number of valid sub forests for y vertices
         for minor in all_minors:
