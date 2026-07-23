@@ -9,7 +9,7 @@ Checks whether a list is legal, in other words: has the expected dimensions and 
 ## **`list_to_matrix.py`**
 Converts the list representation to a adjacency matrix. 
 
-## **`create_string_rep.py`**
+## **`matrix_to_list.py`**
 Extracts the list representation from an adjacency matrix by using the top-right block. It does the opposite of what "list_to_matrix.py" is doing.
 
 ## **`get_all_vertex_subsets_of_size_i.py`**
