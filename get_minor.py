@@ -1,5 +1,5 @@
 import numpy as np
-def get_minor(A,i):#the size of vertex subset we are looking at
+def get_all_minors(A,i):#the size of vertex subset we are looking at
     newA=np.array(A) #array instead of nested list
     lst=get_all_vertex_subsets_of_size_i(i)
     all_minors=[]
@@ -18,5 +18,5 @@ A = [
     [1, 1, 0]
 ]
 
-B=get_minor(A)
+B=get_all_minors(A)
 print(B)
